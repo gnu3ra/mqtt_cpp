@@ -13,8 +13,8 @@ target_include_directories(mqtt_cpp_iface
     $<INSTALL_INTERFACE:${ROOT_MQTT_TARGET}>
 )
 
-IF (MQTT_NO_TLS)
-    target_compile_definitions(mqtt_cpp_iface INTERFACE MQTT_NO_TLS)
+IF (MQTT_USE_TLS)
+    target_compile_definitions(mqtt_cpp_iface INTERFACE MQTT_USE_TLS)
 ENDIF ()
 
 IF (MQTT_USE_WS)
